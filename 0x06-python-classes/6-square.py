@@ -53,7 +53,7 @@ class Square:
     def my_print(self):
         """Prints in stdout the square with the char #, newline if size=0"""
         if self.__size == 0:
-            print() 
+            print()
         else:
             [print() for i in range(self.__position[1])]
             for x in range(self.__size):
