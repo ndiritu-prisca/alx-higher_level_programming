@@ -6,6 +6,8 @@ class Node:
     """Defining class Node"""
     def __init__(self, data, next_node=None):
         """Initializing and instance of class Node"""
+        if type(data) is not int:
+            raise TypeError("data must be an integer")
         self.__data = data
         self.__next_node = next_node
 
@@ -17,8 +19,6 @@ class Node:
     @data.setter
     def data(self, value):
         """Sets data and if data is not an int it raises an error"""
-        if type(value) is not int:
-            raise TypeError("data must be an integer")
         self.__data = value
 
     @property
