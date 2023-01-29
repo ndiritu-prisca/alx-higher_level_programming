@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
     An addition module.
-    It has an addition function that takes in integers or floats as arguments. 
-    The float values are typecatsed into ints and the sum of 2 ints is returned..
+    It has an addition function that takes in integers or floats as arguments.
+    The float values are typecatsed into ints and the sum of 2 ints is returned
 """
 
 
