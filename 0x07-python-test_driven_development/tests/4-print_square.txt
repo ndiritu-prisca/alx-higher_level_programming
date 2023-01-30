@@ -1,0 +1,53 @@
+================================
+4-print_square.py module library
+================================
+
+This library has a function ''print_square()''.
+
+Operation
+=========
+
+''print_square(size)'' takes in 1 argument which is size. If size is an
+integer, it prints a square of 'size' with # character.
+
+Error handling
+==============
+Size must be an integer, otherwise TypeError exception with the message size
+must be an integer is raised.
+If size is less than 0, a ValueError exception with the message
+size must be >= 0 is raised.
+If size is a float and is less than 0, a TypeError exception with the
+message size must be an integer is raised.
+
+Import module
+=============
+    >>> print_square = __import__('4-print_square').print_square
+
+positive int:
+    >>> print_square(2)
+    ##
+    ##
+
+negative int:
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+string:
+    >>> print_square("Horberton")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+float:
+    >>> print_square(7.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+float less than 0:
+    >>> print_square(-8.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
