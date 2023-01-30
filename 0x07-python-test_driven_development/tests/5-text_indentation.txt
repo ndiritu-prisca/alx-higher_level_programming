@@ -1,0 +1,44 @@
+====================================
+5-text_indentation.py module library
+====================================
+
+This library has a function ''text_indentation()''.
+
+Operation
+=========
+
+''text_indentation(text)'' takes in 1 argument. The argument taken in has to
+be a string. The function then prints a text with 2 new lines after each of
+these characters: ., ? and :.
+No spaces are allowed at the beginning or at the end of each printed line
+
+Error handling
+==============
+text must be a string, otherwise raise a TypeError exception with the message
+text must be a string
+
+Import module
+=============
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+integers
+    >>> text_indentation(23)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+string
+    >>> text_indentation('ALX')
+    ALX
+
+character:
+    >>> text_indentation('c')
+    c
+
+string:
+    >>> text_indentation("I am doing my homework. Are you? All the best!!")
+    I am doing my homework.
+    <BLANKLINE>
+    Are you?
+    <BLANKLINE>
+    All the best!!
