@@ -35,6 +35,9 @@ character:
     >>> text_indentation('c')
     c
 
+empty:
+    >>> text_indentation('')
+
 string:
     >>> text_indentation("I am doing my homework. Are you? All the best!!")
     I am doing my homework.
