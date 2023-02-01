@@ -19,7 +19,7 @@ Import module
 =============
     >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-strings
+string, string
     >>> say_my_name("John", "Pete")
     My name is John Pete
 
@@ -43,4 +43,10 @@ string, int
     >>> say_my_name("Prisca", 55)
     Traceback (most recent call last):
     ...
-    TypeError: last_name must be a string 
+    TypeError: last_name must be a string
+
+None
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
