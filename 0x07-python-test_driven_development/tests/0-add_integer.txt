@@ -24,6 +24,16 @@ positive int, positive int:
     >>> add_integer(2, 3)
     5
 
+missing 1 argument:
+    >>> add_integer(2)
+    100
+
+missing 2 arguments:
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
 negative int, positive int:
     >>> add_integer(-1, 3)
     2
@@ -59,3 +69,25 @@ positive int, list:
     Traceback (most recent call last):
     ...
     TypeError: b must be an integer
+
+float infinity:
+    >>> add_integer(10, float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+float NaN:
+    >>> add_integer(10, float('Nan'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer(float('NaN'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
