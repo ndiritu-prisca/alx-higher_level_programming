@@ -34,6 +34,12 @@ negative int:
     ...
     ValueError: size must be >= 0
 
+missing argument:
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
 string:
     >>> print_square("Horberton")
     Traceback (most recent call last):
