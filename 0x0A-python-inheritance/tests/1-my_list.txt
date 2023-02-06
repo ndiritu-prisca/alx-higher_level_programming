@@ -1,0 +1,62 @@
+===========================
+1-my_list.py module library
+===========================
+
+This module has a class. The class has one method.
+
+Operation
+=========
+The class inherits from a list object.
+The public instance function within the class prints out a sorted list.
+
+Assumption
+==========
+All the elements of the list will be of type int
+
+Import module
+=============
+    >>> MyList = __import__('1-my_list').MyList
+
+positive
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+negative
+    >>> a_list = MyList()
+    >>> a_list.append(-1)
+    >>> a_list.append(-4)
+    >>> a_list.append(-2)
+    >>> a_list.append(-3)
+    >>> a_list.append(-5)
+    >>> print(a_list)
+    [-1, -4, -2, -3, -5]
+
+    >>> a_list.print_sorted()
+    [-5, -4, -3, -2, -1]
+    
+    >>> print(a_list)
+    [-1, -4, -2, -3, -5]
+
+empty list
+    >>> a = []
+    >>> my_list = MyList(a)
+    >>> my_list.print_sorted()
+    []
+
+non-empty list
+    >>> a = [10, 5, 7]
+    >>> my_list = MyList(a)
+    >>> my_list.print_sorted()
+    [5, 7, 10]
