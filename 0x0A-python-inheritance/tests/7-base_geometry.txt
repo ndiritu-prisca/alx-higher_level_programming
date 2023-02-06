@@ -54,6 +54,27 @@ string
     ...
     TypeError: name must be an integer
 
+list
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", [1, 2])
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+dictionary
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", {1, 2})
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+tuple
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", (1, 2))
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
 missing one argument
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("name")
