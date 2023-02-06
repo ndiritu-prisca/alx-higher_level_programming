@@ -24,6 +24,13 @@ Import module
 =============
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+Method 1
+    >>> bg = BaseGeometry()
+    >>> print(bg.area())
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
 positive int
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("my_int", 12)
