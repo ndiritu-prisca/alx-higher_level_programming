@@ -12,7 +12,7 @@ path = sys.argv[1]
 if os.path.exists(path):
     os.remove(path)
 
-student_0 = Student("John", "Doe", 23)
+student_1 = Student("John", "Doe", 23)
 j_student_1 = student_1.to_json()
 print("Initial student:")
 print(student_1)
