@@ -349,10 +349,12 @@ class testRectangle(unittest.TestCase):
        AREA METHOD TESTING
     """
     def test_area(self):
+        """Testing area method"""
         r11 = Rectangle(5, 4, 3, 2, 1)
         self.assertEqual(r11.area(), 20)
 
     def test_area_two_args(self):
+        """Testing area method with two arguments"""
         r11 = Rectangle(5, 4)
         self.assertEqual(r11.area(), 20)
 
@@ -360,6 +362,7 @@ class testRectangle(unittest.TestCase):
        DISPLAY METHOD TESTING
     """
     def test_display_two_args(self):
+        """Testing display method with two arguments"""
         r11 = Rectangle(2, 2)
         s_out = StringIO()
         with redirect_stdout(s_out):
@@ -367,6 +370,7 @@ class testRectangle(unittest.TestCase):
         self.assertEqual(s_out.getvalue(), "##\n##\n")
 
     def test_display(self):
+        """Testing display method"""
         r11 = Rectangle(3, 2, 1, 0)
         s_out = StringIO()
         with redirect_stdout(s_out):
@@ -377,10 +381,12 @@ class testRectangle(unittest.TestCase):
        STR METHOD TESTING
     """
     def test_str(self):
+        """Testing string method"""
         r11 = Rectangle(5, 4, 3, 2, 1)
         self.assertEqual(str(r11), '[Rectangle] (1) 3/2 - 5/4')
 
     def test_str_two_args(self):
+        """Testing string method with two arguments"""
         r11 = Rectangle(5, 4)
         self.assertEqual(str(r11), "[Rectangle] ({}) 0/0 - 5/4".format(r11.id))
 
@@ -388,9 +394,20 @@ class testRectangle(unittest.TestCase):
        UPDATE METHOD TESTING
     """
     def test_update(self):
+        """Testing update method"""
         r = Rectangle(10, 10, 10, 10)
         self.assertEqual(str(r), '[Rectangle] ({}) 10/10 - 10/10'.format(r.id))
         r.update(89, 2, 3, 4, 5)
         self.assertEqual(str(r), '[Rectangle] (89) 4/5 - 2/3')
         r.update(x=1, height=2, y=3, width=4)
         self.assertEqual(str(r), '[Rectangle] (89) 1/3 - 4/2')
+
+    """
+       TO DICTIONARY METHOD TESTING
+    """
+    def test_to_dictionary(self):
+        """Testing dictionary method"""
+        r = Rectangle(10, 2, 1, 9)
+        self.assertEqual(str(r), '[Rectangle] ({}) 1/9 - 10/2'.format(r.id))
+        self.assertEqual(r.to_dictionary(), {'x': 1, 'y': 9, 'id': 10, \
+'height': 2, 'width': 10})

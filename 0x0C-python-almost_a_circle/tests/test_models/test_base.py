@@ -4,6 +4,7 @@
 
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
 
 
 class testBase(unittest.TestCase):
@@ -27,4 +28,15 @@ class testBase(unittest.TestCase):
         """Testing when two no arguments are passed"""
         b4 = Base()
         b5 = Base()
-        self.assertEqual(b5.id, 4)
+        self.assertEqual(b4.id, b5.id - 1)
+
+    """
+        TO JSON STRING METHOD TESTING
+    """
+    def test_to_json_string(self):
+        """Testing to_json_string method"""
+        r1 = Rectangle(10, 7, 2, 8)
+        dictionary = r1.to_dictionary()
+        json_dictionary = Base.to_json_string([dictionary])
+        self.assertEqual(json_dictionary, '[{"id": 3, "width": 10, "height": 7, \
+"x": 2, "y": 8}]')
