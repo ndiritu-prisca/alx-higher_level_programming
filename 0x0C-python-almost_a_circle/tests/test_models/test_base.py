@@ -38,5 +38,26 @@ class testBase(unittest.TestCase):
         r1 = Rectangle(10, 7, 2, 8)
         dictionary = r1.to_dictionary()
         json_dictionary = Base.to_json_string([dictionary])
-        self.assertEqual(json_dictionary, '[{"id": 3, "width": 10, "height": 7, \
+        self.assertEqual(json_dictionary, '[{"id": 4, "width": 10, \
+"height": 7, "x": 2, "y": 8}]')
+
+    """
+        SAVE TO FILE CLASS METHOD TESTING
+    """
+    def test_save_to_file(self):
+        """Testing save_to_file class method"""
+        r1 = Rectangle(10, 7, 2, 8)
+        Rectangle.save_to_file([r1])
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual(f.read(), '[{"id": 3, "width": 10, "height": 7, \
 "x": 2, "y": 8}]')
+
+    """
+        FROM JSON STRING METHOD TESTING
+    """
+    def test_from_json_string(self):
+        """Testing from_json_string method"""
+        list_input = [{'id': 7, 'width': 1, 'height': 7}]
+        json_list_input = Rectangle.to_json_string(list_input)
+        list_output = Rectangle.from_json_string(json_list_input)
+        self.assertEqual(list_output, [{'id': 7, 'width': 1, 'height': 7}])
