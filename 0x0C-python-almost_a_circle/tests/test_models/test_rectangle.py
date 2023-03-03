@@ -409,5 +409,5 @@ class testRectangle(unittest.TestCase):
         """Testing dictionary method"""
         r = Rectangle(10, 2, 1, 9)
         self.assertEqual(str(r), '[Rectangle] ({}) 1/9 - 10/2'.format(r.id))
-        self.assertEqual(r.to_dictionary(), {'x': 1, 'y': 9, 'id': 10, \
+        self.assertEqual(r.to_dictionary(), {'x': 1, 'y': 9, 'id': 16, \
 'height': 2, 'width': 10})

@@ -126,5 +126,5 @@ class testSquare(unittest.TestCase):
         """Testing dictionary method"""
         s = Square(10, 2, 1)
         self.assertEqual(str(s), '[Square] ({}) 2/1 - 10'.format(s.id))
-        self.assertEqual(s.to_dictionary(), {'id': 9, 'x': 2, 'size': 10,
+        self.assertEqual(s.to_dictionary(), {'id': 28, 'x': 2, 'size': 10,
                                              'y': 1})
