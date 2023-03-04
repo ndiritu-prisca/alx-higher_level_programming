@@ -186,16 +186,16 @@ the script?
 `b = 1`
 
 ### 32
-`a = 1024`
-`b = 1024`
-`del a`
-`del b`
-`c = 1024`
-How many int objects are created by the execution of the first line of the script? (`104-line1.txt`)
-How many int objects are created by the execution of the second line of the script (`104-line2.txt`)
-After the execution of line 3, is the int object pointed by `a` deleted? Answer with `Yes` or `No` (`104-line3.txt`)
-After the execution of line 4, is the int object pointed by `b` deleted? Answer with `Yes` or `No` (`104-line4.txt`)
-How many int objects are created by the execution of the last line of the script (`104-line5.txt`)
+- `a = 1024`
+- `b = 1024`
+- `del a`
+- `del b`
+- `c = 1024`
+- How many int objects are created by the execution of the first line of the script? (`104-line1.txt`)
+- How many int objects are created by the execution of the second line of the script (`104-line2.txt`)
+- After the execution of line 3, is the int object pointed by `a` deleted? Answer with `Yes` or `No` (`104-line3.txt`)
+- After the execution of line 4, is the int object pointed by `b` deleted? Answer with `Yes` or `No` (`104-line4.txt`)
+- How many int objects are created by the execution of the last line of the script (`104-line5.txt`)
 
 ### 33
 `print("I")`
