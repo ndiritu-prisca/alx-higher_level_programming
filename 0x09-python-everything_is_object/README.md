@@ -14,16 +14,16 @@ Write the name of the function in the file, without ().
 ## Do a and b point to the same object? Answer with Yes or No
 
 ### 2
-`>>> a = 89
->>> b = 100`
+`>>> a = 89`
+`>>> b = 100`
 
 ### 3
-`>>> a = 89
->>> b = 89`
+`>>> a = 89`
+`>>> b = 89`
 
 ### 4
-`>>> a = 89
->>> b = a`
+`>>> a = 89`
+`>>> b = a`
 
 ### 5
 `>>> a = 89
